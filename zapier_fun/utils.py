@@ -11,9 +11,6 @@ from zapier_fun.exceptions import ViewException, ZapierException
 
 class BaseView(HTTPMethodView):
 
-    class ViewException(Exception):
-        """Raised when an exception is caught in a View"""
-
     def __init__(self):
         """Constructor"""
         templates_dir = settings.TEMPLATES_DIR
@@ -64,6 +61,15 @@ class BaseView(HTTPMethodView):
 
 
 async def post_zap(session, payload):
+    """Post Zapier webhook
+
+    :param session: An aiohttp client session.
+    :type session: aiohttp ClientSession object.
+    :param payload: JSON payload to post.
+    :type payload: Dict.
+    :returns: json
+    :raises: ZapierException.
+    """
     try:
         async with session.post(settings.WEBHOOK_URL,
                                 json=payload) as response:
@@ -81,7 +87,13 @@ async def post_zap(session, payload):
 
 
 async def call_webhook(form):
+    """Wrapper function for calling zapier webhook
 
+    :param form: IntroduceForm object.
+    :type form: Object.
+    :returns: json
+
+    """
     payload = {'contact': {}}
     payload['contact']['name'] = "{} {}".format(form.first_name.data,
                                                 form.last_name.data)

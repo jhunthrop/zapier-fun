@@ -26,6 +26,10 @@ _Docker_
 docker-compose up # Port 8080 by default
 ```
 
+### Help
+---
+Please open an issue if you hit any bugs or problems!
+
 ### Todos
 ---
 1. Logging

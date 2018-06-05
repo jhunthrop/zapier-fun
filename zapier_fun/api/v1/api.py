@@ -13,6 +13,7 @@ v1 = Blueprint('v1', url_prefix='/api/v1')
 class IntroduceView(HTTPMethodView):
 
     async def post(self, request):
+        """Introduce yourself"""
 
         form = IntroduceForm.from_json(request.json)
 

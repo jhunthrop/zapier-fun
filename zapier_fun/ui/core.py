@@ -15,23 +15,28 @@ PATH = os.path.dirname(os.path.realpath(__file__))
 class IndexView(BaseView):
 
     async def get(self, request):
+        """Arbitrary route to redirect to introduce page"""
         return redirect('/introduce')
 
 
 class ThanksView(BaseView):
 
     async def get(self, request):
+        """Arbitrary route for saying thanks for introducing yourself"""
+
         return html(self.render('thanks'))
 
 
 class IntroduceView(BaseView):
 
     async def get(self, request):
+        """Renders form for introduction"""
+
         form = IntroduceForm()
         return html(self.render('introduce', context={"form": form}))
 
     async def post(self, request):
-
+        """Calls Zapier webhook with form data or renders errors"""
         form = IntroduceForm(request.form)
 
         if form.validate():
