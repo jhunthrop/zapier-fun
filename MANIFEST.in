@@ -1,0 +1,2 @@
+include zapier_fun/static/*
+include zapier_fun/templates/*

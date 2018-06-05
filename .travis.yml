@@ -1,0 +1,10 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip install -r requirements.txt codecov .
+script:
+  - pytest
+  - coverage run zapier_fun/test_things.py
+after_success:
+  - codecov
