@@ -1,5 +1,5 @@
 ---
-name: Integrations team feature request
+name: Integrations Team Feature Request
 about: Template for integrations team to request new features
 title: ''
 labels: integrations, enhancement

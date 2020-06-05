@@ -1,6 +1,6 @@
 ---
 name: Solutions Engineering Bug Report
-about: Describe this issue template's purpose here.
+about: Template for solutions engineering bug reports
 title: ''
 labels: bug, se
 assignees: ''

@@ -1,6 +1,6 @@
 ---
 name: Customer Support Bug Report
-about: Describe this issue template's purpose here.
+about: Template for customer support bug reports
 title: ''
 labels: bug, support
 assignees: ''
