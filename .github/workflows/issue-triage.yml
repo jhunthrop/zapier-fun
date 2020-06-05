@@ -11,5 +11,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
         GITHUB_PROJECT_URL: https://github.com/jhunthrop/zapier-fun/projects/1
-        GITHUB_PROJECT_COLUMN_NAME: Triage
+        GITHUB_PROJECT_COLUMN_NAME: ${{ secrets.REPO_NAME }}
         DEBUG: true
