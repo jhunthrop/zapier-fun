@@ -3,6 +3,7 @@ on: [issues]
 jobs:
   github-actions-automate-projects:
     runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && github.event.action == 'opened'
     steps:
     - name: add-new-issues-to-integrations-triage
       uses: docker://takanabe/github-actions-automate-projects:v0.0.1
