@@ -1,8 +1,9 @@
 name: Add issues to integrations triage project
-on: [issues]
+on:
+    issues:
+        types: [opened]
 jobs:
   github-actions-automate-projects:
-    if: github.event_name == 'issues' && github.event.action == 'opened'
     runs-on: ubuntu-latest
     steps:
     - name: add-new-issues-to-integrations-triage
