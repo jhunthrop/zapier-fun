@@ -5,7 +5,7 @@ workflow "issues" {
 
 action "Add an issue to project" {
   uses    = "docker://masutaka/github-actions-all-in-one-project:1.1.0"
-  secrets = ["GITHUB_TOKEN"]
+  secrets = ["MY_GITHUB_TOKEN"]
   args    = ["issue"]
 
   env = {
