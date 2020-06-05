@@ -10,5 +10,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
         GITHUB_PROJECT_URL: https://github.com/users/jhunthrop/projects/1
-        GITHUB_PROJECT_COLUMN_NAME:
+        GITHUB_PROJECT_COLUMN_NAME: To do
         DEBUG: true
