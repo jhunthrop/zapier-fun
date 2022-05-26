@@ -12,7 +12,7 @@ MarkupSafe==1.0
 multidict==4.3.1
 sanic==0.7.0
 six==1.11.0
-ujson==1.35
+ujson==5.2.0
 uvloop==0.10.0
 websockets==5.0.1
 WTForms==2.2
